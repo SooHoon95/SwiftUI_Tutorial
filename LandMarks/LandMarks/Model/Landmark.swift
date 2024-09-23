@@ -8,6 +8,7 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
+// The Landmark data already has the id property required by Identifiable protocol; you only need to add a property to decode it when reading the data.
 
 struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
