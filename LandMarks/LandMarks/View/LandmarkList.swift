@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+
 struct LandmarkList: View {
     var body: some View {
-        List {
-            LandmarkRow(landmark: landmarks[0])
-            LandmarkRow(landmark: landmarks[1])
+        // The Landmark data already has the id property required by Identifiable protocol; you only need to add a property to decode it when reading the data.
+        List(landmarks, id: \.id) { landmark in
+            LandmarkRow(landmark: landmark)
         }
     }
 }
